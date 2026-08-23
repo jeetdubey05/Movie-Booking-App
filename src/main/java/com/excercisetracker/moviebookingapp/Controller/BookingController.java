@@ -38,6 +38,7 @@ public class BookingController {
     public ResponseEntity<List<Booking>> cancelBooking(Long bookingId) {
         return ResponseEntity.ok(bookingService.cancelBooking(bookingId));
     }
+    @GetMapping("/bookingstatus/{booking status}")
     public ResponseEntity<List<Booking>> getBookingByStatus(@PathVariable BookingStatus bookingStatus){
         return ResponseEntity.ok(bookingService.getBookingByStatus(bookingStatus));
     }
