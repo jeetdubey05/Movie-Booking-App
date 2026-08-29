@@ -2,7 +2,6 @@ package com.excercisetracker.moviebookingapp.Controller;
 
 import com.excercisetracker.moviebookingapp.DTO.ShowDTO;
 import com.excercisetracker.moviebookingapp.Entity.Show;
-import com.excercisetracker.moviebookingapp.Repository.ShowRepository;
 import com.excercisetracker.moviebookingapp.Service.ShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

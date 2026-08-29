@@ -28,13 +28,13 @@ public class movieController {
     public ResponseEntity<List<Movie>> getAllMoviesByGenre(@RequestParam String genre){
         return ResponseEntity.ok(movieService.getMovieByGenre(String genre));
     }
-    @GetMapping("/getbyanguage")
+    @GetMapping("/getbylanguage")
     public ResponseEntity<List<Movie>> getAllMoviesByLanguage(@RequestParam String genre){
         return ResponseEntity.ok(movieService.getMovieByLanguage(String genre));
     }
     @GetMapping("/getbytitle")
     public ResponseEntity<Movie> getMovieByTitle(@RequestParam String title){
-        return ResponseEntity.ok(movieService.getMovieByTitle(title);
+        return ResponseEntity.ok(movieService.getMovieByTitle(title));
     }
     @PutMapping("/updatemovie")
     @PreAuthorize("hasRole('ADMIN')")

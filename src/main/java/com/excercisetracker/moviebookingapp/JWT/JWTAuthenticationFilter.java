@@ -41,7 +41,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         jwtToken = authHeader.substring(7);
         userName = jwtService.extractUsername(jwtToken);
         //check if we have a userName and no authentication exist yet
-        if(userName==null && SecurityContextHolder.getContext().getAuthentication()==null){
+        if(userName!=null && SecurityContextHolder.getContext().getAuthentication()==null){
             var userDetails=userRepository.findByUsername(userName)
                     .orElseThrow(()->new RuntimeException("Username not found"));
             //validate Token

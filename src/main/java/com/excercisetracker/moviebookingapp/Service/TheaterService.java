@@ -4,7 +4,6 @@ import com.excercisetracker.moviebookingapp.DTO.TheaterDTO;
 import com.excercisetracker.moviebookingapp.Entity.Theater;
 import com.excercisetracker.moviebookingapp.Repository.TheaterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.Optional;

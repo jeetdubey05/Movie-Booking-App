@@ -20,7 +20,7 @@ public class AuthController {
         this.authenticationService = authenticationService;
     }
 
-    private AuthenticationService authenticationService;
+    private final AuthenticationService authenticationService;
 
     @PostMapping("/registernormaluser")
     public ResponseEntity<User> RegisterNormalUser(@RequestBody RegisterRequestDTO registerRequestDTO) {
@@ -29,7 +29,6 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDTO) {
-
         return ResponseEntity.ok(authenticationService.loginUser(loginRequestDTO));
     }
 
